@@ -3785,7 +3785,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_FET:IRF7480M"
+		(symbol "Transistor_FET:SiSS27DN"
 			(pin_names
 				(hide yes)
 			)
@@ -3805,7 +3805,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "IRF7480M"
+			(property "Value" "SiSS27DN"
 				(at 5.08 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3816,7 +3816,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_DirectFET:DirectFET_ME"
+			(property "Footprint" "Package_SO:Vishay_PowerPAK_1212-8_Single"
 				(at 5.08 -1.905 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3829,7 +3829,7 @@
 					(justify left)
 				)
 			)
-			(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-IRF7480M-DS-v01_02-EN.pdf?fileId=5546d462533600a4015355ff8fa41c30"
+			(property "Datasheet" "http://www.vishay.com/docs/62847/siss27dn.pdf"
 				(at 5.08 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3841,7 +3841,7 @@
 					(justify left)
 				)
 			)
-			(property "Description" "330A Id, 40V Vds, 1.2mOhm Rds, N-Channel MOSFET, DirectFET ME"
+			(property "Description" "-50A Id, -30V Vds, P-Channel MOSFET, PowerPAK 1212-8 Single"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3852,7 +3852,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "N-Channel MOSFET"
+			(property "ki_keywords" "P-Channel MOSFET"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3863,7 +3863,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "DirectFET*ME*"
+			(property "ki_fp_filters" "Vishay*PowerPAK*1212*Single*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3874,7 +3874,7 @@
 					)
 				)
 			)
-			(symbol "IRF7480M_0_1"
+			(symbol "SiSS27DN_0_1"
 				(polyline
 					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
@@ -3913,6 +3913,18 @@
 				)
 				(polyline
 					(pts
+						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy 0.762 0.508) (xy 0.762 -0.508)
 					)
 					(stroke
@@ -3935,30 +3947,6 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 				(circle
 					(center 1.651 0)
 					(radius 2.794)
@@ -3968,6 +3956,18 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 0) (xy 1.27 0.381) (xy 1.27 -0.381) (xy 2.286 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(polyline
@@ -4018,7 +4018,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+						(xy 2.794 -0.508) (xy 2.921 -0.381) (xy 3.683 -0.381) (xy 3.81 -0.254)
 					)
 					(stroke
 						(width 0)
@@ -4030,7 +4030,7 @@
 				)
 				(polyline
 					(pts
-						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+						(xy 3.302 -0.381) (xy 2.921 0.254) (xy 3.683 0.254) (xy 3.302 -0.381)
 					)
 					(stroke
 						(width 0)
@@ -4041,11 +4041,11 @@
 					)
 				)
 			)
-			(symbol "IRF7480M_1_1"
+			(symbol "SiSS27DN_1_1"
 				(pin passive line
-					(at 2.54 5.08 270)
+					(at 2.54 -5.08 90)
 					(length 2.54)
-					(name "D"
+					(name "S"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4060,10 +4060,11 @@
 						)
 					)
 				)
-				(pin input line
-					(at -5.08 0 0)
+				(pin passive line
+					(at 2.54 -5.08 90)
 					(length 2.54)
-					(name "G"
+					(hide yes)
+					(name "S"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4081,6 +4082,7 @@
 				(pin passive line
 					(at 2.54 -5.08 90)
 					(length 2.54)
+					(hide yes)
 					(name "S"
 						(effects
 							(font
@@ -4089,6 +4091,42 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4635,7 +4673,7 @@
 	(text_box "600mA 3.3V LDO\n"
 		(exclude_from_sim no)
 		(at 156.21 59.69 0)
-		(size 38.1 30.48)
+		(size 53.34 30.48)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -4646,15 +4684,16 @@
 		)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left top)
 		)
 		(uuid "0224240d-ea1f-452b-a110-610821329305")
 	)
-	(text_box "LDO Output\n"
+	(text_box "LED Output\n"
 		(exclude_from_sim no)
-		(at 196.85 59.69 0)
+		(at 212.09 86.36 0)
 		(size 34.29 26.67)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -4666,6 +4705,7 @@
 		)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left top)
@@ -4686,11 +4726,33 @@
 		)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left top)
 		)
 		(uuid "10dd31c2-dfd1-47ce-8e1c-0e73290162d4")
+	)
+	(text_box "Battery Input"
+		(exclude_from_sim no)
+		(at 59.69 114.3 0)
+		(size 15.24 25.4)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "Rockwell")
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2c5a65cd-4921-4c6b-a991-c99ea85dc58e")
 	)
 	(text_box "STM32G441"
 		(exclude_from_sim no)
@@ -4706,6 +4768,7 @@
 		)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left top)
@@ -4726,6 +4789,7 @@
 		)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left top)
@@ -4734,7 +4798,7 @@
 	)
 	(text_box "3.3V -> 5V Logic Shifter"
 		(exclude_from_sim no)
-		(at 156.21 92.71 0)
+		(at 156.21 93.98 0)
 		(size 50.8 34.29)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -4746,11 +4810,33 @@
 		)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left top)
 		)
 		(uuid "5246cafa-cdc4-45a7-bb65-1e2907af334d")
+	)
+	(text_box "Test Schematic"
+		(exclude_from_sim no)
+		(at 212.09 59.69 0)
+		(size 54.61 24.13)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "Rockwell")
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "7e10e105-c81c-4513-b37a-a8c282efe048")
 	)
 	(text_box "Battery Managment IC"
 		(exclude_from_sim no)
@@ -4766,6 +4852,7 @@
 		)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left top)
@@ -4786,6 +4873,7 @@
 		)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left top)
@@ -4806,11 +4894,34 @@
 		)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left top)
 		)
 		(uuid "8c61a4cf-aa09-4db1-b776-4ec6e363360b")
+	)
+	(text_box "BMS Cell Inputs\n"
+		(exclude_from_sim no)
+		(at 59.69 85.09 0)
+		(size 34.29 26.67)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "Rockwell")
+				(size 1.27 1.27)
+			)
+			(justify left top)
+			(href "#1")
+		)
+		(uuid "94e6c41e-e096-4403-aebe-1ebb43dd625a")
 	)
 	(text_box "Coulumb Counter"
 		(exclude_from_sim no)
@@ -4826,15 +4937,37 @@
 		)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left top)
 		)
 		(uuid "b26ffb97-f94b-48ed-87e6-552147b56bd9")
 	)
+	(text_box "Decoupling STM32 Caps"
+		(exclude_from_sim no)
+		(at 156.21 130.81 0)
+		(size 44.45 26.67)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "Rockwell")
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "b3e05c0e-de28-4576-b20f-2e0ed4ef32e7")
+	)
 	(text_box "CAN Output"
 		(exclude_from_sim no)
-		(at 208.28 92.71 0)
+		(at 137.16 175.26 0)
 		(size 25.4 13.97)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -4846,14 +4979,36 @@
 		)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left top)
 		)
 		(uuid "d6fffdc5-ff63-4ba9-9238-8f3de4adc5dc")
 	)
+	(text_box "Discharging Mosfet Circuit"
+		(exclude_from_sim no)
+		(at 212.09 115.57 0)
+		(size 33.02 31.75)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "Rockwell")
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "eb333460-53db-47a7-80c4-c5b27e384771")
+	)
 	(junction
-		(at 162.56 73.66)
+		(at 170.18 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "04270ad7-9624-4abb-9ccf-4a910c48d0ab")
@@ -4863,6 +5018,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "104347d5-2f5b-4fad-bd70-14cb4125c941")
+	)
+	(junction
+		(at 175.26 140.97)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "181023b3-5d26-4635-868a-70b7f554ee28")
 	)
 	(junction
 		(at 125.73 124.46)
@@ -4901,6 +5062,12 @@
 		(uuid "382bac58-205a-4090-9734-07c88156a616")
 	)
 	(junction
+		(at 168.91 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "437f3a8c-d41c-48ae-8afa-1d9a32a0b418")
+	)
+	(junction
 		(at 226.06 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4917,6 +5084,30 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "73f925ae-d89e-495f-94b4-813db5beef9b")
+	)
+	(junction
+		(at 162.56 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "77a2d937-8465-40fe-8728-f4b16dc2a5d3")
+	)
+	(junction
+		(at 196.85 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "790206ed-9779-46d6-bad9-31e382b36c38")
+	)
+	(junction
+		(at 175.26 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7d75d809-b7df-4394-963e-549457ba57e8")
+	)
+	(junction
+		(at 162.56 140.97)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7e2966c2-1100-4e5f-a9fe-ea070dcd4296")
 	)
 	(junction
 		(at 26.67 137.16)
@@ -5093,6 +5284,16 @@
 			(type default)
 		)
 		(uuid "1528b832-a4c8-427f-826a-5b36b886cce8")
+	)
+	(wire
+		(pts
+			(xy 162.56 140.97) (xy 175.26 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "169a11b6-ce0d-470d-b0dc-d0516cad2a4c")
 	)
 	(wire
 		(pts
@@ -5426,13 +5627,23 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 78.74) (xy 162.56 78.74)
+			(xy 171.45 78.74) (xy 170.18 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "663234fd-6e0b-44c6-8513-61387478c4aa")
+	)
+	(wire
+		(pts
+			(xy 165.1 81.28) (xy 168.91 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68430e01-e6cf-4137-b1ce-cafd64a9993e")
 	)
 	(wire
 		(pts
@@ -5476,7 +5687,17 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 76.2) (xy 161.29 76.2)
+			(xy 175.26 140.97) (xy 187.96 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73c7ac1a-eb5d-4b50-af9f-151c597b4f84")
+	)
+	(wire
+		(pts
+			(xy 171.45 76.2) (xy 168.91 76.2)
 		)
 		(stroke
 			(width 0)
@@ -5543,6 +5764,16 @@
 			(type default)
 		)
 		(uuid "7e64943b-f850-4ac3-ad65-e0781085e244")
+	)
+	(wire
+		(pts
+			(xy 196.85 73.66) (xy 200.66 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8234d9cd-3de0-4860-941b-b66f3357d61f")
 	)
 	(wire
 		(pts
@@ -5626,7 +5857,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 76.2) (xy 161.29 81.28)
+			(xy 168.91 76.2) (xy 168.91 81.28)
 		)
 		(stroke
 			(width 0)
@@ -5653,6 +5884,16 @@
 			(type default)
 		)
 		(uuid "99f4eba1-c3e8-4895-a135-e7175dcda28b")
+	)
+	(wire
+		(pts
+			(xy 162.56 148.59) (xy 175.26 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a84115a-0562-443e-bede-a09d3e0405cc")
 	)
 	(wire
 		(pts
@@ -5693,6 +5934,16 @@
 			(type default)
 		)
 		(uuid "9ec362b2-6779-4513-8318-909b1b5c067d")
+	)
+	(wire
+		(pts
+			(xy 175.26 148.59) (xy 187.96 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f4465ba-f1fb-4d42-ad40-af122d02323b")
 	)
 	(wire
 		(pts
@@ -5756,7 +6007,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 78.74) (xy 162.56 73.66)
+			(xy 170.18 78.74) (xy 170.18 73.66)
 		)
 		(stroke
 			(width 0)
@@ -5836,6 +6087,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 73.66) (xy 170.18 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c784da30-a1eb-4fa4-9f7a-110e0a7f2719")
+	)
+	(wire
+		(pts
 			(xy 36.83 95.25) (xy 39.37 95.25)
 		)
 		(stroke
@@ -5906,7 +6167,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 73.66) (xy 163.83 73.66)
+			(xy 170.18 73.66) (xy 171.45 73.66)
 		)
 		(stroke
 			(width 0)
@@ -5980,6 +6241,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -5992,6 +6254,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6004,6 +6267,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6016,6 +6280,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6028,6 +6293,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6040,6 +6306,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6048,25 +6315,53 @@
 	)
 	(global_label "LED-3.3V"
 		(shape input)
-		(at 168.91 110.49 180)
+		(at 168.91 111.76 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
 		(uuid "18e70a90-4f5e-4947-9f8c-0d68fc6badd4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 156.7929 110.49 0)
+			(at 156.7929 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "Load"
+		(shape input)
+		(at 228.6 127 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Rockwell")
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1a31f5e0-bc48-45e3-9954-da2d4db18745")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 228.6 119.5397 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -6076,6 +6371,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6088,9 +6384,36 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "CELL4"
+		(shape input)
+		(at 218.44 69.85 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Rockwell")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1e4daf8b-5db9-4cc8-a633-9af12f426911")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 218.44 78.5199 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -6100,6 +6423,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -6112,6 +6436,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6124,6 +6449,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -6136,6 +6462,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6148,6 +6475,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6160,9 +6488,36 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "CELL3"
+		(shape input)
+		(at 226.06 69.85 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Rockwell")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "38d4c1fe-4212-460c-bbf3-093630454c51")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 226.06 78.5199 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -6172,6 +6527,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6184,6 +6540,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6196,6 +6553,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6208,6 +6566,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6220,6 +6579,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6232,9 +6592,36 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "CELL1"
+		(shape input)
+		(at 241.3 69.85 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Rockwell")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "549075a3-00a2-473e-b398-b728fb2e55e2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 241.3 78.5199 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -6244,6 +6631,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6256,6 +6644,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6264,22 +6653,24 @@
 	)
 	(global_label "LED-5V"
 		(shape input)
-		(at 210.82 73.66 180)
+		(at 226.06 100.33 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
 		(uuid "61296a7e-76b3-4932-b339-de5d7b78108c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 200.5172 73.66 0)
+			(at 215.7572 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6288,22 +6679,24 @@
 	)
 	(global_label "CAN-H"
 		(shape input)
-		(at 220.98 100.33 180)
+		(at 149.86 182.88 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
 		(uuid "6215b225-de4a-4a0b-aaf9-6441bdd319f0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 211.4028 100.33 0)
+			(at 140.2828 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6316,6 +6709,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -6328,6 +6722,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6340,6 +6735,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -6352,6 +6748,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6364,6 +6761,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -6376,6 +6774,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6384,22 +6783,24 @@
 	)
 	(global_label "LED-5V"
 		(shape input)
-		(at 189.23 110.49 0)
+		(at 189.23 111.76 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "7468a981-508a-4f54-b39f-56f6c99d7160")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 199.5328 110.49 0)
+			(at 199.5328 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6412,6 +6813,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -6424,6 +6826,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6436,6 +6839,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6448,6 +6852,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6456,22 +6861,50 @@
 	)
 	(global_label "CELL1"
 		(shape input)
-		(at 71.12 105.41 180)
+		(at 73.66 100.33 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
 		(uuid "7b62d264-fdb2-4d5d-bcb8-497f9bd4dcee")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 62.4501 105.41 0)
+			(at 64.9901 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "CELL2"
+		(shape input)
+		(at 233.68 69.85 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Rockwell")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "825ae7eb-2b49-4c9d-8445-848e67a92d61")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 233.68 78.5199 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6484,6 +6917,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -6496,6 +6930,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6508,6 +6943,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -6520,6 +6956,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6532,6 +6969,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6544,6 +6982,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6552,22 +6991,24 @@
 	)
 	(global_label "DSG"
 		(shape input)
-		(at 220.98 134.62 180)
+		(at 220.98 132.08 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
 		(uuid "8d215852-11d4-45c9-a49c-f64edf20851c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 214.2453 134.62 0)
+			(at 214.2453 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6580,6 +7021,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -6592,6 +7034,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6604,6 +7047,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6616,6 +7060,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6624,22 +7069,24 @@
 	)
 	(global_label "CELL4"
 		(shape input)
-		(at 71.12 97.79 180)
+		(at 73.66 92.71 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
 		(uuid "92688086-233e-47c8-98b7-7b6bd8881f28")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 62.4501 97.79 0)
+			(at 64.9901 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6652,6 +7099,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -6664,6 +7112,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6672,22 +7121,24 @@
 	)
 	(global_label "CELL2"
 		(shape input)
-		(at 71.12 102.87 180)
+		(at 73.66 97.79 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
 		(uuid "9c6d0bf0-a968-4b31-af59-bb0d20a32c5c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 62.4501 102.87 0)
+			(at 64.9901 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6700,6 +7151,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6712,6 +7164,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6724,6 +7177,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6736,6 +7190,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6748,6 +7203,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -6760,6 +7216,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6768,22 +7225,24 @@
 	)
 	(global_label "CAN-L"
 		(shape input)
-		(at 220.98 102.87 180)
+		(at 149.86 185.42 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
 		(uuid "b8bb7bcc-cf1e-443d-98cb-b166e3d3619e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 211.7052 102.87 0)
+			(at 140.5852 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6792,22 +7251,24 @@
 	)
 	(global_label "CELL3"
 		(shape input)
-		(at 71.12 100.33 180)
+		(at 73.66 95.25 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
 		(uuid "bc98b305-2d2b-4bd7-9d42-abcca17e5b96")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 62.4501 100.33 0)
+			(at 64.9901 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6820,6 +7281,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6832,6 +7294,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6844,6 +7307,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6856,6 +7320,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6868,6 +7333,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6880,6 +7346,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6892,6 +7359,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6904,6 +7372,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6916,6 +7385,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -6928,6 +7398,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6940,6 +7411,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -6952,6 +7424,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -6964,6 +7437,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -6976,6 +7450,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6988,6 +7463,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -7000,6 +7476,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -7012,6 +7489,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -7024,6 +7502,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -7036,6 +7515,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -7048,6 +7528,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -7060,6 +7541,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify right)
@@ -7072,6 +7554,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -7084,6 +7567,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -7096,6 +7580,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -7108,6 +7593,7 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
+				(face "Rockwell")
 				(size 1.27 1.27)
 			)
 			(justify left)
@@ -7120,6 +7606,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -7128,7 +7615,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 181.61 102.87 0)
+		(at 181.61 104.14 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7139,55 +7626,60 @@
 		(fields_autoplaced yes)
 		(uuid "022d1f1e-e399-4b1a-a37b-10a5a720112c")
 		(property "Reference" "#PWR020"
-			(at 181.61 106.68 0)
+			(at 181.61 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "+5V"
-			(at 181.61 97.79 0)
+			(at 181.61 99.06 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 102.87 0)
+			(at 181.61 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 102.87 0)
+			(at 181.61 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 181.61 102.87 0)
+			(at 181.61 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7222,6 +7714,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -7233,6 +7726,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -7245,6 +7739,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7256,6 +7751,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7267,6 +7763,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7305,6 +7802,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7315,6 +7813,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7326,6 +7825,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7337,6 +7837,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7348,6 +7849,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7382,6 +7884,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7392,6 +7895,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7403,6 +7907,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7414,6 +7919,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7425,6 +7931,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7461,6 +7968,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7471,6 +7979,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7482,6 +7991,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7493,6 +8003,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7504,6 +8015,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7541,6 +8053,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -7552,6 +8065,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -7564,6 +8078,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7575,6 +8090,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7586,6 +8102,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7607,7 +8124,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 179.07 118.11 0)
+		(at 179.07 119.38 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7618,55 +8135,60 @@
 		(fields_autoplaced yes)
 		(uuid "18a3b126-26f9-41e0-87c0-489b40ed9ef4")
 		(property "Reference" "#PWR019"
-			(at 179.07 124.46 0)
+			(at 179.07 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "GND"
-			(at 179.07 123.19 0)
+			(at 179.07 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 179.07 118.11 0)
+			(at 179.07 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 179.07 118.11 0)
+			(at 179.07 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 179.07 118.11 0)
+			(at 179.07 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7701,6 +8223,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -7712,6 +8235,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -7724,6 +8248,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7735,6 +8260,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7746,6 +8272,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7784,6 +8311,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7794,6 +8322,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7805,6 +8334,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7816,6 +8346,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7827,6 +8358,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7845,7 +8377,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 257.81 69.85 0)
+		(at 233.68 69.85 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7856,56 +8388,61 @@
 		(fields_autoplaced yes)
 		(uuid "235d3c02-9a1f-44f0-ab43-a2e8399c37dc")
 		(property "Reference" "TP3"
-			(at 260.35 65.2779 0)
+			(at 236.22 65.2779 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "T"
-			(at 260.35 67.8179 0)
+			(at 236.22 67.8179 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 262.89 69.85 0)
+			(at 238.76 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 262.89 69.85 0)
+			(at 238.76 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "test point"
-			(at 257.81 69.85 0)
+			(at 233.68 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -7924,7 +8461,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 242.57 69.85 0)
+		(at 218.44 69.85 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7935,56 +8472,61 @@
 		(fields_autoplaced yes)
 		(uuid "2f3e59b4-d912-4c9f-9b4d-059d3d61b8a4")
 		(property "Reference" "TP1"
-			(at 245.11 65.2779 0)
+			(at 220.98 65.2779 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "T"
-			(at 245.11 67.8179 0)
+			(at 220.98 67.8179 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 247.65 69.85 0)
+			(at 223.52 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 247.65 69.85 0)
+			(at 223.52 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "test point"
-			(at 242.57 69.85 0)
+			(at 218.44 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8003,7 +8545,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 210.82 76.2 0)
+		(at 226.06 102.87 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8014,55 +8556,60 @@
 		(fields_autoplaced yes)
 		(uuid "31cf5d99-00a9-4361-b7e6-7b3f1e7def63")
 		(property "Reference" "#PWR025"
-			(at 210.82 82.55 0)
+			(at 226.06 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "GND"
-			(at 210.82 81.28 0)
+			(at 226.06 107.95 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 210.82 76.2 0)
+			(at 226.06 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 210.82 76.2 0)
+			(at 226.06 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 210.82 76.2 0)
+			(at 226.06 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8098,6 +8645,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8108,6 +8656,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8119,6 +8668,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8130,6 +8680,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8141,6 +8692,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8175,6 +8727,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -8186,6 +8739,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -8198,6 +8752,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8209,6 +8764,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8220,6 +8776,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8241,7 +8798,7 @@
 	)
 	(symbol
 		(lib_id "Custom-Symbols:AP2112")
-		(at 163.83 73.66 0)
+		(at 171.45 73.66 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8252,115 +8809,125 @@
 		(fields_autoplaced yes)
 		(uuid "3c0c943d-a53a-4a45-b7b6-37ab61b118c5")
 		(property "Reference" "IC1"
-			(at 176.53 66.04 0)
+			(at 184.15 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "AP2112K"
-			(at 176.53 68.58 0)
+			(at 184.15 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" "Custom-Footprints:SOT95P285X140-5N"
-			(at 190.5 168.58 0)
+			(at 198.12 168.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left top)
 			)
 		)
 		(property "Datasheet" "https://www.diodes.com//assets/Datasheets/AP2112.pdf"
-			(at 190.5 268.58 0)
+			(at 198.12 268.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left top)
 			)
 		)
 		(property "Description" "600mA 3.3V LDO Regulator Enable SOT23-5 DiodesZetex AP2112K-3.3TRG1, LDO Voltage Regulator, 3.3 V +/-1.5%, 2.5  6 Vin, 5-Pin SOT-23"
-			(at 163.83 73.66 0)
+			(at 171.45 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Height" "1.4"
-			(at 190.5 468.58 0)
+			(at 198.12 468.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left top)
 			)
 		)
 		(property "Mouser Part Number" "621-AP2112K-3.3TRG1"
-			(at 190.5 568.58 0)
+			(at 198.12 568.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left top)
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/AP2112K-3.3TRG1?qs=x6A8l6qLYDDPYHosCdzh%2FA%3D%3D"
-			(at 190.5 668.58 0)
+			(at 198.12 668.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left top)
 			)
 		)
 		(property "Manufacturer_Name" "Diodes Incorporated"
-			(at 190.5 768.58 0)
+			(at 198.12 768.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left top)
 			)
 		)
 		(property "Manufacturer_Part_Number" "AP2112K-3.3TRG1"
-			(at 190.5 868.58 0)
+			(at 198.12 868.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left top)
@@ -8391,6 +8958,89 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 200.66 81.28 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3cbe9161-fd43-4a13-a2ac-ade29269fbde")
+		(property "Reference" "#PWR037"
+			(at 200.66 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 200.66 86.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 200.66 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0c82ef6c-7d85-48d2-be64-ddbbdaac7c7d")
+		)
+		(instances
+			(project "Navigator-BMS"
+				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
+					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 109.22 170.18 270)
 		(mirror x)
@@ -8408,6 +9058,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8418,6 +9069,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8429,6 +9081,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8440,6 +9093,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8451,6 +9105,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8487,6 +9142,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8497,6 +9153,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8508,6 +9165,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8519,6 +9177,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8530,6 +9189,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8551,7 +9211,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 176.53 102.87 0)
+		(at 176.53 104.14 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8562,55 +9222,60 @@
 		(fields_autoplaced yes)
 		(uuid "4961122a-8453-45b8-aa29-ded08cd460c6")
 		(property "Reference" "#PWR018"
-			(at 176.53 106.68 0)
+			(at 176.53 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 176.53 97.79 0)
+			(at 176.53 99.06 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 176.53 102.87 0)
+			(at 176.53 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 176.53 102.87 0)
+			(at 176.53 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 176.53 102.87 0)
+			(at 176.53 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8645,6 +9310,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -8656,6 +9322,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -8668,6 +9335,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8679,6 +9347,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8690,6 +9359,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8728,6 +9398,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8738,6 +9409,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8749,6 +9421,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8760,6 +9433,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8771,6 +9445,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8806,6 +9481,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8816,6 +9492,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8827,6 +9504,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8838,6 +9516,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8849,6 +9528,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8866,8 +9546,94 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 165.1 77.47 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4f105b37-01e9-4636-9983-d5c6e1d3e1cb")
+		(property "Reference" "C18"
+			(at 161.29 76.1999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1uF"
+			(at 161.29 78.7399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 166.0652 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 165.1 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e899bc67-9153-4490-8f18-cacf756d2e95")
+		)
+		(pin "2"
+			(uuid "84657020-b6ab-4f3e-af8b-fdbb62c87f60")
+		)
+		(instances
+			(project "Navigator-BMS"
+				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
+					(reference "C18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 250.19 69.85 0)
+		(at 226.06 69.85 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8878,56 +9644,61 @@
 		(fields_autoplaced yes)
 		(uuid "56e2da05-7d7d-4927-965b-7fad4a7edb03")
 		(property "Reference" "TP2"
-			(at 252.73 65.2779 0)
+			(at 228.6 65.2779 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "T"
-			(at 252.73 67.8179 0)
+			(at 228.6 67.8179 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 255.27 69.85 0)
+			(at 231.14 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 255.27 69.85 0)
+			(at 231.14 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "test point"
-			(at 250.19 69.85 0)
+			(at 226.06 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8962,6 +9733,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -8973,18 +9745,20 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 249.8852 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -8996,6 +9770,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9007,6 +9782,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9045,6 +9821,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9055,6 +9832,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9066,6 +9844,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9077,6 +9856,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9088,6 +9868,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9123,6 +9904,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9133,6 +9915,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9144,6 +9927,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9155,6 +9939,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9166,6 +9951,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9177,6 +9963,90 @@
 			(project "Navigator-BMS"
 				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
 					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 248.92 69.85 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5d2a5623-2fd2-49f7-a846-1b670e60f9fe")
+		(property "Reference" "TP5"
+			(at 251.46 65.2779 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "T"
+			(at 251.46 67.8179 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 254 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 254 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 248.92 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f37cf2df-8309-4d7d-981b-b2dff1b91d9b")
+		)
+		(instances
+			(project "Navigator-BMS"
+				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -9200,6 +10070,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -9211,6 +10082,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -9223,6 +10095,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9234,6 +10107,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9245,6 +10119,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9259,6 +10134,89 @@
 			(project "Navigator-BMS"
 				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
 					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 162.56 140.97 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "620eb860-9e85-4a58-89d1-09a7d201d593")
+		(property "Reference" "#PWR039"
+			(at 162.56 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 162.56 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 162.56 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b50cde88-9078-417c-a0b1-eaac2806266f")
+		)
+		(instances
+			(project "Navigator-BMS"
+				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -9282,6 +10240,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9292,6 +10251,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9303,6 +10263,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9314,6 +10275,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9325,6 +10287,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9339,6 +10302,93 @@
 			(project "Navigator-BMS"
 				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
 					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 200.66 77.47 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6aa02f54-5145-43d3-84d9-4c4675707a2d")
+		(property "Reference" "C19"
+			(at 204.47 76.1999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1uF"
+			(at 204.47 78.7399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 199.6948 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 200.66 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "eff90621-8e39-4674-8a8e-b78e46e49da3")
+		)
+		(pin "2"
+			(uuid "a0d9bca9-9c15-49f3-bae9-07918a3aa894")
+		)
+		(instances
+			(project "Navigator-BMS"
+				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -9361,6 +10411,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9371,6 +10422,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9382,6 +10434,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9393,6 +10446,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9404,6 +10458,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9440,6 +10495,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9450,6 +10506,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9461,6 +10518,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9472,6 +10530,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9483,6 +10542,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9520,6 +10580,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9530,6 +10591,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9541,6 +10603,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9552,6 +10615,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9563,6 +10627,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9601,6 +10666,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9611,6 +10677,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9622,6 +10689,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9633,6 +10701,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9644,6 +10713,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9655,6 +10725,172 @@
 			(project "Navigator-BMS"
 				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 248.92 69.85 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75147d12-c3ec-41df-9a13-50a1766ff72f")
+		(property "Reference" "#PWR040"
+			(at 248.92 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 248.92 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 248.92 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 248.92 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 248.92 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "72ae2864-98f9-4042-b1fe-777e6278dddf")
+		)
+		(instances
+			(project "Navigator-BMS"
+				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
+					(reference "#PWR040")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 162.56 148.59 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "768335af-4d9b-42bb-a52e-e5e02998202a")
+		(property "Reference" "#PWR038"
+			(at 162.56 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 162.56 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 162.56 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "32151163-31ad-4693-b035-d6ea4cb1ecb5")
+		)
+		(instances
+			(project "Navigator-BMS"
+				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -9678,6 +10914,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -9689,6 +10926,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -9701,6 +10939,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9712,6 +10951,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9723,6 +10963,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9760,6 +11001,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -9771,6 +11013,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -9783,6 +11026,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9794,6 +11038,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9805,6 +11050,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9896,6 +11142,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -9907,6 +11154,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -9919,6 +11167,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9930,6 +11179,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9941,6 +11191,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -9978,6 +11229,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -9989,6 +11241,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -10001,6 +11254,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10012,6 +11266,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10023,6 +11278,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10061,6 +11317,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10071,6 +11328,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10082,6 +11340,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10093,6 +11352,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10104,6 +11364,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10137,6 +11398,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10147,6 +11409,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10158,6 +11421,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10169,6 +11433,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10180,6 +11445,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10217,6 +11483,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -10228,6 +11495,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -10240,6 +11508,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10251,6 +11520,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10262,6 +11532,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10283,7 +11554,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 228.6 139.7 0)
+		(at 228.6 137.16 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10294,55 +11565,60 @@
 		(fields_autoplaced yes)
 		(uuid "8862dad8-0bf1-4b17-b9bd-9b384a66ce2e")
 		(property "Reference" "#PWR032"
-			(at 228.6 146.05 0)
+			(at 228.6 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "GND"
-			(at 228.6 144.78 0)
+			(at 228.6 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 228.6 139.7 0)
+			(at 228.6 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 228.6 139.7 0)
+			(at 228.6 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 228.6 139.7 0)
+			(at 228.6 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10360,8 +11636,95 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 187.96 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8cee7579-0c34-492b-bd90-9fcee8d7b365")
+		(property "Reference" "C22"
+			(at 191.77 143.5099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 191.77 146.0499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 188.9252 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 187.96 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b5591295-3cf7-4fb4-846c-f2b170630c6b")
+		)
+		(pin "2"
+			(uuid "d1d29dc9-4d68-425c-a939-b8b030ae1201")
+		)
+		(instances
+			(project "Navigator-BMS"
+				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
+					(reference "C22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
-		(at 71.12 107.95 0)
+		(at 73.66 102.87 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10372,55 +11735,60 @@
 		(fields_autoplaced yes)
 		(uuid "8f7cdc01-b836-4df7-846e-b2067eaf0aa8")
 		(property "Reference" "#PWR036"
-			(at 71.12 114.3 0)
+			(at 73.66 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "GND"
-			(at 71.12 113.03 0)
+			(at 73.66 107.95 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 71.12 107.95 0)
+			(at 73.66 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 71.12 107.95 0)
+			(at 73.66 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 71.12 107.95 0)
+			(at 73.66 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10455,6 +11823,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -10466,6 +11835,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -10478,6 +11848,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10489,6 +11860,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10500,6 +11872,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10538,6 +11911,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10548,6 +11922,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10559,6 +11934,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10570,6 +11946,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10581,6 +11958,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10592,94 +11970,6 @@
 			(project "Navigator-BMS"
 				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
 					(reference "#PWR014")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:IRF7480M")
-		(at 226.06 134.62 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9d929e96-bb02-4e30-93f4-1e2318aeb0e3")
-		(property "Reference" "Q1"
-			(at 232.41 133.3499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRF7480M"
-			(at 232.41 135.8899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DirectFET:DirectFET_ME"
-			(at 231.14 136.525 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-IRF7480M-DS-v01_02-EN.pdf?fileId=5546d462533600a4015355ff8fa41c30"
-			(at 231.14 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "330A Id, 40V Vds, 1.2mOhm Rds, N-Channel MOSFET, DirectFET ME"
-			(at 226.06 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "038a8ae9-7cf4-4e97-b596-9fcb97937758")
-		)
-		(pin "2"
-			(uuid "477d60bc-b743-469f-973f-7a5968870ba2")
-		)
-		(pin "1"
-			(uuid "bffc18eb-6e99-4306-8a28-7bf62e918018")
-		)
-		(instances
-			(project "Navigator-BMS"
-				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
-					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -10704,6 +11994,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10714,6 +12005,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10725,6 +12017,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10736,6 +12029,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10747,6 +12041,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10782,6 +12077,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10792,6 +12088,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10803,6 +12100,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10814,6 +12112,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10825,6 +12124,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10860,6 +12160,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10870,6 +12171,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10881,6 +12183,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10892,6 +12195,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10903,6 +12207,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10937,6 +12242,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -10948,6 +12254,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -10960,6 +12267,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10971,6 +12279,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -10982,6 +12291,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11003,7 +12313,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
-		(at 215.9 73.66 0)
+		(at 231.14 100.33 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11014,56 +12324,61 @@
 		(fields_autoplaced yes)
 		(uuid "a192c071-b1cd-4c55-af4b-702c7e9a985f")
 		(property "Reference" "J1"
-			(at 218.44 72.3899 0)
+			(at 233.68 99.0599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "Conn_01x03"
-			(at 218.44 74.9299 0)
+			(at 233.68 101.5999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm"
-			(at 215.9 73.66 0)
+			(at 231.14 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 73.66 0)
+			(at 231.14 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 215.9 73.66 0)
+			(at 231.14 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11088,7 +12403,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 189.23 73.66 0)
+		(at 196.85 73.66 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11099,55 +12414,60 @@
 		(fields_autoplaced yes)
 		(uuid "a1ef3f2d-7c93-48b2-8bba-745030cbeafd")
 		(property "Reference" "#PWR022"
-			(at 189.23 77.47 0)
+			(at 196.85 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 189.23 68.58 0)
+			(at 196.85 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 189.23 73.66 0)
+			(at 196.85 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 189.23 73.66 0)
+			(at 196.85 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 189.23 73.66 0)
+			(at 196.85 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11182,6 +12502,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -11193,6 +12514,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -11205,6 +12527,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11216,6 +12539,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11227,6 +12551,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11265,6 +12590,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11275,6 +12601,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11286,6 +12613,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11297,6 +12625,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11308,6 +12637,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11326,7 +12656,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x05")
-		(at 76.2 102.87 0)
+		(at 78.74 97.79 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11337,56 +12667,61 @@
 		(fields_autoplaced yes)
 		(uuid "a3e3b7a8-c52e-42cb-9f5c-906a444b5f60")
 		(property "Reference" "J4"
-			(at 78.74 101.5999 0)
+			(at 81.28 96.5199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "Conn_01x05"
-			(at 78.74 104.1399 0)
+			(at 81.28 99.0599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 76.2 102.87 0)
+		(property "Footprint" "Connector_JST:JST_EH_B5B-EH-A_1x05_P2.50mm_Vertical"
+			(at 78.74 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 102.87 0)
+			(at 78.74 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 76.2 102.87 0)
+			(at 78.74 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11434,6 +12769,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11444,6 +12780,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11455,6 +12792,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11466,6 +12804,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11477,6 +12816,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11495,7 +12835,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 161.29 81.28 0)
+		(at 168.91 81.28 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11506,55 +12846,60 @@
 		(fields_autoplaced yes)
 		(uuid "a9d97ff1-4f9b-4c86-96a2-a6701cb0e9e7")
 		(property "Reference" "#PWR015"
-			(at 161.29 87.63 0)
+			(at 168.91 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "GND"
-			(at 161.29 86.36 0)
+			(at 168.91 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 161.29 81.28 0)
+			(at 168.91 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 161.29 81.28 0)
+			(at 168.91 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 161.29 81.28 0)
+			(at 168.91 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11573,7 +12918,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 179.07 138.43 0)
+		(at 69.85 127 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11584,55 +12929,60 @@
 		(fields_autoplaced yes)
 		(uuid "abe5256b-2ce8-4cad-9d20-30ba8ab212c5")
 		(property "Reference" "#PWR030"
-			(at 179.07 142.24 0)
+			(at 69.85 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "BAT+"
-			(at 179.07 133.35 0)
+			(at 69.85 121.92 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 179.07 138.43 0)
+			(at 69.85 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 179.07 138.43 0)
+			(at 69.85 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 179.07 138.43 0)
+			(at 69.85 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11666,6 +13016,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -11677,6 +13028,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -11689,6 +13041,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11700,6 +13053,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11711,6 +13065,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11725,6 +13080,105 @@
 			(project "Navigator-BMS"
 				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
 					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:SiSS27DN")
+		(at 226.06 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ae60f225-ac7c-4657-ab83-65dd65cd7d33")
+		(property "Reference" "Q1"
+			(at 232.41 130.8099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SiSS27DN"
+			(at 232.41 133.3499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:Vishay_PowerPAK_1212-8_Single"
+			(at 231.14 133.985 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/62847/siss27dn.pdf"
+			(at 231.14 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "-50A Id, -30V Vds, P-Channel MOSFET, PowerPAK 1212-8 Single"
+			(at 226.06 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "dfbfcc9b-5c38-42d5-bce3-baca275a6f4e")
+		)
+		(pin "3"
+			(uuid "8d210258-2d85-4f35-bca4-1c02b0daafc4")
+		)
+		(pin "4"
+			(uuid "fa8d4095-2833-4ab3-898d-f1443b81eac1")
+		)
+		(pin "1"
+			(uuid "39c4b59a-4caf-423e-8a10-69e963de38a8")
+		)
+		(pin "5"
+			(uuid "6e49519d-e454-4f94-ac60-d206fff6b580")
+		)
+		(instances
+			(project "Navigator-BMS"
+				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -11748,6 +13202,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -11759,6 +13214,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -11771,6 +13227,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11782,6 +13239,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11793,6 +13251,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11814,7 +13273,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 226.06 100.33 0)
+		(at 154.94 182.88 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11825,56 +13284,61 @@
 		(fields_autoplaced yes)
 		(uuid "b7966af3-baf9-4973-b1b7-2b86288892a2")
 		(property "Reference" "J2"
-			(at 228.6 100.3299 0)
+			(at 157.48 182.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "CAN"
-			(at 228.6 102.8699 0)
+			(at 157.48 185.4199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "TerminalBlock:TerminalBlock_Xinya_XY308-2.54-2P_1x02_P2.54mm_Horizontal"
-			(at 226.06 100.33 0)
+			(at 154.94 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 100.33 0)
+			(at 154.94 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 226.06 100.33 0)
+			(at 154.94 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11896,7 +13360,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 265.43 69.85 0)
+		(at 241.3 69.85 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11907,56 +13371,61 @@
 		(fields_autoplaced yes)
 		(uuid "b799e02e-276a-41c3-91a7-22b67ffb32e0")
 		(property "Reference" "TP4"
-			(at 267.97 65.2779 0)
+			(at 243.84 65.2779 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "T"
-			(at 267.97 67.8179 0)
+			(at 243.84 67.8179 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 270.51 69.85 0)
+			(at 246.38 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 270.51 69.85 0)
+			(at 246.38 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "test point"
-			(at 265.43 69.85 0)
+			(at 241.3 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -11992,6 +13461,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12002,6 +13472,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12013,6 +13484,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12024,6 +13496,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12035,6 +13508,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12053,7 +13527,7 @@
 	)
 	(symbol
 		(lib_id "Logic_LevelTranslator:SN74AUP1T34DCK")
-		(at 179.07 110.49 0)
+		(at 179.07 111.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12064,54 +13538,59 @@
 		(fields_autoplaced yes)
 		(uuid "bca160ca-ae20-4097-8237-3106dcc9ce01")
 		(property "Reference" "U5"
-			(at 196.85 104.0698 0)
+			(at 196.85 105.3398 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "SN74AUP1T34DCK"
-			(at 196.85 106.6098 0)
+			(at 196.85 107.8798 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
-			(at 179.07 128.27 0)
+			(at 179.07 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74aup1t34.pdf"
-			(at 179.07 125.73 0)
+			(at 179.07 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "1-Bit Unidirectional Voltage-Level Translator, SC-70"
-			(at 179.07 110.49 0)
+			(at 179.07 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12159,6 +13638,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12169,6 +13649,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12180,6 +13661,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12191,6 +13673,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12202,6 +13685,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12236,6 +13720,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -12247,6 +13732,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -12259,6 +13745,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12270,6 +13757,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12281,6 +13769,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12318,6 +13807,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -12329,6 +13819,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -12341,6 +13832,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 					(italic yes)
 				)
@@ -12353,6 +13845,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12364,6 +13857,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12419,6 +13913,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12429,6 +13924,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12440,6 +13936,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -12452,6 +13949,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -12464,6 +13962,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12497,7 +13996,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 173.99 140.97 180)
+		(at 64.77 129.54 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12508,54 +14007,59 @@
 		(fields_autoplaced yes)
 		(uuid "c644ea1b-12cb-4da5-9718-e2a6b0f9758e")
 		(property "Reference" "J3"
-			(at 173.99 132.08 0)
+			(at 64.77 120.65 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "CAN"
-			(at 173.99 134.62 0)
+			(at 64.77 123.19 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" "Connector_AMASS:AMASS_XT60-F_1x02_P7.20mm_Vertical"
-			(at 173.99 140.97 0)
+			(at 64.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 140.97 0)
+			(at 64.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 173.99 140.97 0)
+			(at 64.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12592,6 +14096,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12602,6 +14107,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12613,6 +14119,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12624,6 +14131,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12635,6 +14143,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12684,6 +14193,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -12695,6 +14205,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -12707,6 +14218,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12718,6 +14230,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12729,6 +14242,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12766,6 +14280,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -12777,18 +14292,20 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 237.1852 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12800,6 +14317,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12811,6 +14329,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12849,6 +14368,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12859,6 +14379,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12870,6 +14391,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12881,6 +14403,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12892,6 +14415,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12926,6 +14450,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -12937,6 +14462,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -12949,6 +14475,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify right)
@@ -12961,6 +14488,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -12972,6 +14500,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13103,6 +14632,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13113,6 +14643,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13124,6 +14655,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13135,6 +14667,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13146,6 +14679,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13164,7 +14698,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 210.82 71.12 0)
+		(at 226.06 97.79 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13175,55 +14709,60 @@
 		(fields_autoplaced yes)
 		(uuid "d98c4523-c8c7-4579-8b56-c71452d6d5c0")
 		(property "Reference" "#PWR024"
-			(at 210.82 74.93 0)
+			(at 226.06 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "+5V"
-			(at 210.82 66.04 0)
+			(at 226.06 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 210.82 71.12 0)
+			(at 226.06 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 210.82 71.12 0)
+			(at 226.06 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 210.82 71.12 0)
+			(at 226.06 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13258,6 +14797,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -13269,6 +14809,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -13281,6 +14822,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13292,6 +14834,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13303,6 +14846,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13340,6 +14884,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -13351,6 +14896,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -13363,6 +14909,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13374,6 +14921,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13385,6 +14933,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13405,8 +14954,95 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 175.26 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e2d4e508-48c1-46a8-a475-7684faeae7d2")
+		(property "Reference" "C21"
+			(at 179.07 143.5099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 179.07 146.0499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 176.2252 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 175.26 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5050ac03-6a6c-452b-968c-da10f4fe2b3a")
+		)
+		(pin "2"
+			(uuid "7e739ec7-bef2-4855-9d06-7df269353d75")
+		)
+		(instances
+			(project "Navigator-BMS"
+				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
+					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
-		(at 162.56 73.66 0)
+		(at 170.18 73.66 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13417,55 +15053,60 @@
 		(fields_autoplaced yes)
 		(uuid "e3370e15-6816-4c31-8101-4689fe53c131")
 		(property "Reference" "#PWR016"
-			(at 162.56 77.47 0)
+			(at 170.18 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "+5V"
-			(at 162.56 68.58 0)
+			(at 170.18 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 73.66 0)
+			(at 170.18 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 73.66 0)
+			(at 170.18 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 162.56 73.66 0)
+			(at 170.18 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13501,6 +15142,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13511,6 +15153,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13522,6 +15165,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13533,6 +15177,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13544,6 +15189,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13579,6 +15225,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13589,6 +15236,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13600,6 +15248,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13611,6 +15260,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13622,6 +15272,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13655,6 +15306,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13665,6 +15317,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13676,6 +15329,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13687,6 +15341,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13698,6 +15353,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13719,7 +15375,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 179.07 140.97 0)
+		(at 69.85 129.54 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13730,55 +15386,60 @@
 		(fields_autoplaced yes)
 		(uuid "ee105e0d-ed06-440d-930f-9cac3a3e279a")
 		(property "Reference" "#PWR031"
-			(at 179.07 147.32 0)
+			(at 69.85 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Value" "GND"
-			(at 179.07 146.05 0)
+			(at 69.85 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 179.07 140.97 0)
+			(at 69.85 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 179.07 140.97 0)
+			(at 69.85 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 179.07 140.97 0)
+			(at 69.85 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13814,6 +15475,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13824,6 +15486,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13835,6 +15498,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13846,6 +15510,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13857,6 +15522,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13891,6 +15557,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -13902,6 +15569,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -13914,6 +15582,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13925,6 +15594,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13936,6 +15606,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13950,6 +15621,93 @@
 			(project "Navigator-BMS"
 				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
 					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 162.56 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa4f095f-cca7-422e-8055-02b53bcbc394")
+		(property "Reference" "C20"
+			(at 166.37 143.5099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 166.37 146.0499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 163.5252 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 162.56 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Rockwell")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "50248c90-ba06-400d-8b6c-7ec706fdb120")
+		)
+		(pin "2"
+			(uuid "c9a1bf87-f5d6-4d36-a3e4-24bfb92462e8")
+		)
+		(instances
+			(project "Navigator-BMS"
+				(path "/b56c0d33-965c-42f6-adb5-4642dce857d4"
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -13974,6 +15732,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13984,6 +15743,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -13995,6 +15755,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -14006,6 +15767,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -14017,6 +15779,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -14052,6 +15815,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -14062,6 +15826,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -14073,6 +15838,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -14084,6 +15850,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -14095,6 +15862,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -14128,6 +15896,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -14138,6 +15907,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -14149,6 +15919,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -14160,6 +15931,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
@@ -14171,6 +15943,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Rockwell")
 					(size 1.27 1.27)
 				)
 			)
